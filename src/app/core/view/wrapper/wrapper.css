@@ -1,0 +1,27 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: 50px auto 50px;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-areas: 
+    "h h h h h h h h h h h h" 
+    "c c c c c c c c c c c c"
+    "f f f f f f f f f f f f";
+  overflow-x: hidden;
+}
+
+.box {
+  background-color: aquamarine;
+}
+
+.header {
+  grid-area: h;
+}
+
+.container {
+  grid-area: c;
+}
+
+.footer {
+  grid-area: f;
+}
+      
