@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 const paths = require('.');
@@ -26,7 +25,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin([paths.distPath()]),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Moria: deep in the mountain, all mithril you can have'
     }),
